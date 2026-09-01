@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mes réseaux</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page">
+
+        <section class="hero">
+
+            <img
+                src="images/photo_profil.jpg"
+                alt="Photo de profil"
+                class="photo-fond"
+            >
+
+            <div class="degrade"></div>
+
+            <div class="profil">
+
+                <h1>Bow</h1>
+
+                <p class="pseudo">
+                    @bowsiri_7997
+                </p>
+
+                <div class="followers">
+                    Mes comptes officiels
+                </div>
+
+                <div class="reseaux">
+
+                    <!-- INSTAGRAM -->
+                    <button
+                        class="icone bouton-reseau"
+                        id="ouvrir-instagram"
+                        type="button"
+                        aria-label="Instagram"
+                    >
+                        <img
+                            src="images/logos/instagram.jpg"
+                            alt="Instagram"
+                        >
+                    </button>
+
+
+                    <!-- TIKTOK -->
+                    <a href="https://tiktok.com/" target="_blank">
+
+                        <div class="icone">
+
+                            <img
+                                src="images/logos/tiktok.jpg"
+                                alt="TikTok"
+                            >
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- X -->
+                    <a href="https://x.com/" target="_blank">
+
+                        <div class="icone">
+
+                            <img
+                                src="images/logos/x.jpg"
+                                alt="X"
+                            >
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- FACEBOOK -->
+                    <a href="https://facebook.com/" target="_blank">
+
+                        <div class="icone">
+
+                            <img
+                                src="images/logos/facebook.jpg"
+                                alt="Facebook"
+                            >
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FENÊTRE INSTAGRAM -->
+
+    <dialog
+        id="fenetre-instagram"
+        class="fenetre-comptes"
+    >
+
+        <div class="contenu-fenetre">
+
+            <button
+                id="fermer-instagram"
+                class="fermer"
+                type="button"
+                aria-label="Fermer"
+            >
+                ×
+            </button>
+
+            <img
+                src="images/logos/instagram.jpg"
+                alt="Instagram"
+                class="logo-fenetre"
+            >
+
+            <h2>Instagram</h2>
+
+            <p class="question-compte">
+                Quel compte voulez-vous voir ?
+            </p>
+
+
+            <a
+                class="choix-compte"
+                href="https://instagram.com/compte1"
+                target="_blank"
+            >
+
+                <span class="nom-compte">
+                    @compte_principal
+                </span>
+
+                <span class="description-compte">
+                    Compte principal
+                </span>
+
+            </a>
+
+
+            <a
+                class="choix-compte"
+                href="https://instagram.com/compte2"
+                target="_blank"
+            >
+
+                <span class="nom-compte">
+                    @compte_secondaire
+                </span>
+
+                <span class="description-compte">
+                    Compte secondaire
+                </span>
+
+            </a>
+
+
+            <a
+                class="choix-compte"
+                href="https://instagram.com/compte3"
+                target="_blank"
+            >
+
+                <span class="nom-compte">
+                    @autre_compte
+                </span>
+
+                <span class="description-compte">
+                    Autre compte
+                </span>
+
+            </a>
+
+        </div>
+
+    </dialog>
+
+
+    <script>
+
+        const boutonInstagram =
+            document.getElementById("ouvrir-instagram");
+
+        const fenetreInstagram =
+            document.getElementById("fenetre-instagram");
+
+        const fermerInstagram =
+            document.getElementById("fermer-instagram");
+
+
+        boutonInstagram.addEventListener("click", function() {
+
+            fenetreInstagram.showModal();
+
+        });
+
+
+        fermerInstagram.addEventListener("click", function() {
+
+            fenetreInstagram.close();
+
+        });
+
+
+        fenetreInstagram.addEventListener("click", function(event) {
+
+            if (event.target === fenetreInstagram) {
+
+                fenetreInstagram.close();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
