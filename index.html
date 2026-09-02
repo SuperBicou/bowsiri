@@ -17,7 +17,7 @@
         <section class="hero">
 
             <img
-                src="images/photo_profil.jpg"
+                src="images/photo_profil.webp"
                 alt="Photo de profil"
                 class="photo-fond"
             >
@@ -38,7 +38,10 @@
 
                 <div class="reseaux">
 
-                    <!-- INSTAGRAM -->
+                    <!-- ============================== -->
+                    <!-- INSTAGRAM                      -->
+                    <!-- ============================== -->
+
                     <button
                         class="icone bouton-reseau"
                         id="ouvrir-instagram"
@@ -46,49 +49,43 @@
                         aria-label="Instagram"
                     >
                         <img
-                            src="images/logos/instagram.jpg"
+                            src="images/logos/instagram.webp"
                             alt="Instagram"
                         >
                     </button>
 
 
-                    <!-- TIKTOK -->
-                    <a href="https://tiktok.com/" target="_blank">
+                    <!-- ============================== -->
+                    <!-- TIKTOK                         -->
+                    <!-- ============================== -->
+
+                    <button
+                        class="icone bouton-reseau"
+                        id="ouvrir-tiktok"
+                        type="button"
+                        aria-label="TikTok"
+                    >
+                        <img
+                            src="images/logos/tiktok.webp"
+                            alt="TikTok"
+                        >
+                    </button>
+
+
+                    <!-- ============================== -->
+                    <!-- FACEBOOK                       -->
+                    <!-- ============================== -->
+
+                    <a
+                        href="https://www.facebook.com/share/1AxxyMqYBf/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
 
                         <div class="icone">
 
                             <img
-                                src="images/logos/tiktok.jpg"
-                                alt="TikTok"
-                            >
-
-                        </div>
-
-                    </a>
-
-
-                    <!-- X -->
-                    <a href="https://x.com/" target="_blank">
-
-                        <div class="icone">
-
-                            <img
-                                src="images/logos/x.jpg"
-                                alt="X"
-                            >
-
-                        </div>
-
-                    </a>
-
-
-                    <!-- FACEBOOK -->
-                    <a href="https://facebook.com/" target="_blank">
-
-                        <div class="icone">
-
-                            <img
-                                src="images/logos/facebook.jpg"
+                                src="images/logos/facebook.webp"
                                 alt="Facebook"
                             >
 
@@ -105,7 +102,9 @@
     </main>
 
 
-    <!-- FENÊTRE INSTAGRAM -->
+    <!-- ========================================== -->
+    <!-- FENÊTRE INSTAGRAM                          -->
+    <!-- ========================================== -->
 
     <dialog
         id="fenetre-instagram"
@@ -123,27 +122,35 @@
                 ×
             </button>
 
+
             <img
                 src="images/logos/instagram.jpg"
                 alt="Instagram"
                 class="logo-fenetre"
             >
 
-            <h2>Instagram</h2>
+
+            <h2>
+                Instagram
+            </h2>
+
 
             <p class="question-compte">
                 Quel compte voulez-vous voir ?
             </p>
 
 
+            <!-- COMPTE INSTAGRAM 1 -->
+
             <a
                 class="choix-compte"
-                href="https://instagram.com/compte1"
+                href="https://instagram.com/@bowsiri_7997"
                 target="_blank"
+                rel="noopener noreferrer"
             >
 
                 <span class="nom-compte">
-                    @compte_principal
+                    @bowsiri_7997
                 </span>
 
                 <span class="description-compte">
@@ -153,35 +160,21 @@
             </a>
 
 
+            <!-- COMPTE INSTAGRAM 2 -->
+
             <a
                 class="choix-compte"
-                href="https://instagram.com/compte2"
+                href="https://instagram.com/@bow_797978"
                 target="_blank"
+                rel="noopener noreferrer"
             >
 
                 <span class="nom-compte">
-                    @compte_secondaire
+                    @bow_797978
                 </span>
 
                 <span class="description-compte">
                     Compte secondaire
-                </span>
-
-            </a>
-
-
-            <a
-                class="choix-compte"
-                href="https://instagram.com/compte3"
-                target="_blank"
-            >
-
-                <span class="nom-compte">
-                    @autre_compte
-                </span>
-
-                <span class="description-compte">
-                    Autre compte
                 </span>
 
             </a>
@@ -191,7 +184,97 @@
     </dialog>
 
 
+    <!-- ========================================== -->
+    <!-- FENÊTRE TIKTOK                             -->
+    <!-- ========================================== -->
+
+    <dialog
+        id="fenetre-tiktok"
+        class="fenetre-comptes"
+    >
+
+        <div class="contenu-fenetre">
+
+            <button
+                id="fermer-tiktok"
+                class="fermer"
+                type="button"
+                aria-label="Fermer"
+            >
+                ×
+            </button>
+
+
+            <img
+                src="images/logos/tiktok.jpg"
+                alt="TikTok"
+                class="logo-fenetre"
+            >
+
+
+            <h2>
+                TikTok
+            </h2>
+
+
+            <p class="question-compte">
+                Quel compte voulez-vous voir ?
+            </p>
+
+
+            <!-- COMPTE TIKTOK 1 -->
+
+            <a
+                class="choix-compte"
+                href="https://www.tiktok.com/@bowsiri79"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span class="nom-compte">
+                    @bowsiri79
+                </span>
+
+                <span class="description-compte">
+                    Compte principal
+                </span>
+
+            </a>
+
+
+            <!-- COMPTE TIKTOK 2 -->
+
+            <a
+                class="choix-compte"
+                href="https://www.tiktok.com/@bowsiri7979"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <span class="nom-compte">
+                    @bowsiri7979
+                </span>
+
+                <span class="description-compte">
+                    Compte secondaire
+                </span>
+
+            </a>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT                                 -->
+    <!-- ========================================== -->
+
     <script>
+
+        /* ============================== */
+        /* INSTAGRAM                      */
+        /* ============================== */
 
         const boutonInstagram =
             document.getElementById("ouvrir-instagram");
@@ -222,6 +305,46 @@
             if (event.target === fenetreInstagram) {
 
                 fenetreInstagram.close();
+
+            }
+
+        });
+
+
+
+        /* ============================== */
+        /* TIKTOK                         */
+        /* ============================== */
+
+        const boutonTikTok =
+            document.getElementById("ouvrir-tiktok");
+
+        const fenetreTikTok =
+            document.getElementById("fenetre-tiktok");
+
+        const fermerTikTok =
+            document.getElementById("fermer-tiktok");
+
+
+        boutonTikTok.addEventListener("click", function() {
+
+            fenetreTikTok.showModal();
+
+        });
+
+
+        fermerTikTok.addEventListener("click", function() {
+
+            fenetreTikTok.close();
+
+        });
+
+
+        fenetreTikTok.addEventListener("click", function(event) {
+
+            if (event.target === fenetreTikTok) {
+
+                fenetreTikTok.close();
 
             }
 
