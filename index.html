@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
 
@@ -10,11 +10,11 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Mes réseaux</title>
+    <title>My Social Media</title>
 
 
     <!-- ========================================== -->
-    <!-- PRÉCHARGEMENT PHOTO PRINCIPALE             -->
+    <!-- PRELOAD MAIN PHOTO                         -->
     <!-- ========================================== -->
 
     <link
@@ -27,7 +27,7 @@
 
 
     <!-- ========================================== -->
-    <!-- PRÉCHARGEMENT CSS                          -->
+    <!-- PRELOAD CSS                                -->
     <!-- ========================================== -->
 
     <link
@@ -38,7 +38,7 @@
 
 
     <!-- ========================================== -->
-    <!-- CSS CRITIQUE                               -->
+    <!-- CRITICAL CSS                               -->
     <!-- ========================================== -->
 
     <style>
@@ -374,7 +374,7 @@
 
 
     <!-- ========================================== -->
-    <!-- FEUILLE CSS COMPLÈTE                       -->
+    <!-- FULL CSS STYLESHEET                        -->
     <!-- ========================================== -->
 
     <link
@@ -393,12 +393,12 @@
 
 
             <!-- ========================================== -->
-            <!-- PHOTO PRINCIPALE                           -->
+            <!-- MAIN PHOTO                                 -->
             <!-- ========================================== -->
 
             <img
                 src="images/photo_profil.webp"
-                alt="Photo de profil"
+                alt="Profile photo"
                 class="photo-fond"
                 fetchpriority="high"
             >
@@ -408,7 +408,7 @@
 
 
             <!-- ========================================== -->
-            <!-- PROFIL                                     -->
+            <!-- PROFILE                                    -->
             <!-- ========================================== -->
 
             <div class="profil">
@@ -429,7 +429,7 @@
 
 
                 <!-- ====================================== -->
-                <!-- RÉSEAUX                                -->
+                <!-- SOCIAL MEDIA                           -->
                 <!-- ====================================== -->
 
                 <div class="reseaux">
@@ -441,12 +441,15 @@
                         class="icone bouton-reseau"
                         id="ouvrir-instagram"
                         type="button"
-                        aria-label="Instagram"
+                        aria-label="Open Instagram accounts"
+                        aria-haspopup="dialog"
+                        aria-controls="fenetre-instagram"
                     >
 
                         <img
                             src="images/logos/instagram.webp"
-                            alt="Instagram"
+                            alt=""
+                            aria-hidden="true"
                         >
 
                     </button>
@@ -458,12 +461,15 @@
                         class="icone bouton-reseau"
                         id="ouvrir-tiktok"
                         type="button"
-                        aria-label="TikTok"
+                        aria-label="Open TikTok accounts"
+                        aria-haspopup="dialog"
+                        aria-controls="fenetre-tiktok"
                     >
 
                         <img
                             src="images/logos/tiktok.webp"
-                            alt="TikTok"
+                            alt=""
+                            aria-hidden="true"
                         >
 
                     </button>
@@ -472,20 +478,18 @@
                     <!-- FACEBOOK -->
 
                     <a
+                        class="icone"
                         href="https://www.facebook.com/share/1AxxyMqYBf/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="Facebook"
+                        aria-label="Open Facebook profile"
                     >
 
-                        <div class="icone">
-
-                            <img
-                                src="images/logos/facebook.webp"
-                                alt="Facebook"
-                            >
-
-                        </div>
+                        <img
+                            src="images/logos/facebook.webp"
+                            alt=""
+                            aria-hidden="true"
+                        >
 
                     </a>
 
@@ -500,44 +504,55 @@
 
 
     <!-- ========================================== -->
-    <!-- FENÊTRE INSTAGRAM                          -->
+    <!-- INSTAGRAM ACCOUNT DIALOG                   -->
     <!-- ========================================== -->
 
     <dialog
         id="fenetre-instagram"
         class="fenetre-comptes"
+        aria-labelledby="titre-instagram"
+        aria-describedby="description-instagram"
     >
 
         <div class="contenu-fenetre">
+
+
+            <!-- CLOSE BUTTON -->
 
             <button
                 id="fermer-instagram"
                 class="fermer"
                 type="button"
-                aria-label="Fermer"
+                aria-label="Close Instagram accounts dialog"
             >
                 ×
             </button>
 
 
+            <!-- INSTAGRAM LOGO -->
+
             <img
                 src="images/logos/instagram.webp"
-                alt="Instagram"
+                alt=""
+                aria-hidden="true"
                 class="logo-fenetre"
             >
 
 
-            <h2>
+            <h2 id="titre-instagram">
                 Instagram
             </h2>
 
 
-            <p class="question-compte">
-                Quel compte voulez-vous voir ?
+            <p
+                class="question-compte"
+                id="description-instagram"
+            >
+                Which account would you like to view?
             </p>
 
 
-            <!-- COMPTE INSTAGRAM 1 -->
+            <!-- INSTAGRAM ACCOUNT 1 -->
 
             <a
                 class="choix-compte"
@@ -551,13 +566,13 @@
                 </span>
 
                 <span class="description-compte">
-                    Compte principal
+                    Main account
                 </span>
 
             </a>
 
 
-            <!-- COMPTE INSTAGRAM 2 -->
+            <!-- INSTAGRAM ACCOUNT 2 -->
 
             <a
                 class="choix-compte"
@@ -571,7 +586,7 @@
                 </span>
 
                 <span class="description-compte">
-                    Compte secondaire
+                    Secondary account
                 </span>
 
             </a>
@@ -583,44 +598,55 @@
 
 
     <!-- ========================================== -->
-    <!-- FENÊTRE TIKTOK                             -->
+    <!-- TIKTOK ACCOUNT DIALOG                      -->
     <!-- ========================================== -->
 
     <dialog
         id="fenetre-tiktok"
         class="fenetre-comptes"
+        aria-labelledby="titre-tiktok"
+        aria-describedby="description-tiktok"
     >
 
         <div class="contenu-fenetre">
+
+
+            <!-- CLOSE BUTTON -->
 
             <button
                 id="fermer-tiktok"
                 class="fermer"
                 type="button"
-                aria-label="Fermer"
+                aria-label="Close TikTok accounts dialog"
             >
                 ×
             </button>
 
 
+            <!-- TIKTOK LOGO -->
+
             <img
                 src="images/logos/tiktok.webp"
-                alt="TikTok"
+                alt=""
+                aria-hidden="true"
                 class="logo-fenetre"
             >
 
 
-            <h2>
+            <h2 id="titre-tiktok">
                 TikTok
             </h2>
 
 
-            <p class="question-compte">
-                Quel compte voulez-vous voir ?
+            <p
+                class="question-compte"
+                id="description-tiktok"
+            >
+                Which account would you like to view?
             </p>
 
 
-            <!-- COMPTE TIKTOK 1 -->
+            <!-- TIKTOK ACCOUNT 1 -->
 
             <a
                 class="choix-compte"
@@ -634,13 +660,13 @@
                 </span>
 
                 <span class="description-compte">
-                    Compte principal
+                    Main account
                 </span>
 
             </a>
 
 
-            <!-- COMPTE TIKTOK 2 -->
+            <!-- TIKTOK ACCOUNT 2 -->
 
             <a
                 class="choix-compte"
@@ -654,7 +680,7 @@
                 </span>
 
                 <span class="description-compte">
-                    Compte secondaire
+                    Secondary account
                 </span>
 
             </a>
